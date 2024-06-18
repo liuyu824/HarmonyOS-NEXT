@@ -170,6 +170,20 @@ Image：图片显示组件
 2. Slider属性
 
    ```javascript
+   Slider({
+     min:0,   //最小值
+     max:100, //最大值
+     value:30,//当前值
+     step:10, //滑动步长
+     style:SliderStyle.OutSet, //InSet
+     direction:Axis.Horizontal,//Vertical
+     reverse:false  //是否允许反向滑动
+   }).width(250)
+     .showTips(true) //是否展示当前value百分比
+     .onChange(value=>{
+     	this.imgHeight = value;
+     	this.imgWidth = value;
+      })
    ```
 
    

@@ -71,7 +71,7 @@ struct Index {
           reverse:false  //是否允许反向滑动
         }).width(250)
           .showTips(true) //是否展示当前value百分比
-          .onChange(value=>{
+          .onChange(value => {
             this.imgHeight = value;
             this.imgWidth = value;
           })
