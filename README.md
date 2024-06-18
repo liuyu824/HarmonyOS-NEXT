@@ -186,4 +186,10 @@ Image：图片显示组件
       })
    ```
 
-   
+## 10. ArkUI组件 - Column && Row页面布局
+
+线形布局组件：Column && Row
+
+<img src='./HarmonyOS_layout.png'></img>
+
+<img src='./HarmonyOS_layout1.png'></img>
