@@ -1,6 +1,6 @@
 # Harmony-OS Study
 
-## 05. ArkUI组件 - Image组件
+## 05. ArkUI组件 - Image
 
 Image：图片显示组件
 
@@ -56,7 +56,7 @@ Image：图片显示组件
      .interpolation(ImageInterpolation.High) //图片插值
    ```
 
-## 06. ArkUI组件 - Text组件
+## 06. ArkUI组件 - Text
 
 1. 声明Text组件并设置文本内容
 
@@ -83,7 +83,7 @@ Image：图片显示组件
      .textAlign(TextAlign.Center)
    ```
 
-## 07. ArkUI组件 - TextInput组件
+## 07. ArkUI组件 - TextInput
 
 1. 声明 TextInput 组件
 
@@ -106,6 +106,70 @@ Image：图片显示组件
      .height(50) //高度
      .backgroundColor('#FFF') //背景色
      .type(InputType.PhoneNumber) //输入类型
+     .onChange(value =>{
+       // 文本输入框内部文字更改事件
+       this.imgHeight = parseInt(value);
+       this.imgWidth = parseInt(value);
+      })
+   ```
+
+## 08. ArkUI组件 - Button
+
+1. 声明Button组件
+
+   ```javascript
+   Button(label?:ResourceStr)
+   ```
+
+   - 文字型按钮
+
+     ```java
+     Button('click me')
+     ```
+
+   - 自定义按钮，在Button内嵌套其他组件
+
+     ```java
+     Button(){
+       Image($r('app.image.search')).width(20).margin(10)
+     }
+     ```
+
+2. 添加属性和事件
+
+   ```javascript
+   Button('Click Me to make img small')
+     .type(ButtonType.Capsule)
+     .width(200)
+     .height(30)
+     .margin(10)
+     .onClick(() => {
+     	if (this.imgHeight > 10 && this.imgWidth > 10) {
+         this.imgWidth -= 10;
+         this.imgHeight -= 10;
+       }
+   	})
+   ```
+
+## 09. ArkUI组件 - Slider
+
+1. 声明Slider组件
+
+   ```java
+   Slider({
+     min:0,   //最小值
+     max:100, //最大值
+     value:30,//当前值
+     step:10, //滑动步长
+     style:SliderStyle.OutSet, //InSet
+     direction:Axis.Horizontal,//Vertical
+     reverse:false  //是否允许反向滑动
+   })
+   ```
+
+2. Slider属性
+
+   ```javascript
    ```
 
    
