@@ -4,11 +4,11 @@
 
 Image：图片显示组件
 
-### 1. 声明Image组件并设置图片源
+1. 声明Image组件并设置图片源
 
-```java
-Image(src:string | PixelMap | Resource)
-```
+   ```java
+   Image(src:string | PixelMap | Resource)
+   ```
 
 - string格式，通常用来加载网络图片
 
@@ -46,30 +46,66 @@ Image(src:string | PixelMap | Resource)
   Image($rawfile('mate60.png'))
   ```
 
-### 2. 添加图片属性
+2. 添加图片属性
 
-```java
-Image($r('app.media.icon'))
-  .width(100) //宽度
-  .height(120) //高度
-  .borderRadius(10) //边框圆角
-  .interpolation(ImageInterpolation.High) //图片插值
-```
+   ```java
+   Image($r('app.media.icon'))
+     .width(100) //宽度
+     .height(120) //高度
+     .borderRadius(10) //边框圆角
+     .interpolation(ImageInterpolation.High) //图片插值
+   ```
 
 ## 06. ArkUI组件 - Text组件
 
-### 1. 声明Text组件并设置文本内容
+1. 声明Text组件并设置文本内容
 
-```java
-Text(content?:string|Resource)
-# string格式，直接填写文本内容
-Text('图片宽度')
-# Resource格式，读取本地资源文件  
-Text($r('app.string.width_label'))  
-```
+   ```java
+   Text(content?:string|Resource)
+   # string格式，直接填写文本内容
+   Text('图片宽度')
+   # Resource格式，读取本地资源文件  
+   Text($r('app.string.width_label'))  
+   ```
 
-#### HarmonyOS - Application - Structure
+​	HarmonyOS - Application - Structure
 
 <img src='HarmonyOS_structure.png'></img>
 
-### 2. 添加文本属性
+2. 添加文本属性
+
+   ```java
+   Text($r('app.string.width_label'))
+     .fontSize(50)
+     .fontWeight(FontWeight.Bold)
+     .fontStyle(FontStyle.Italic)
+     .width('100%')
+     .textAlign(TextAlign.Center)
+   ```
+
+## 07. ArkUI组件 - TextInput组件
+
+1. 声明 TextInput 组件
+
+   ```javascript
+   TextInput({placeholder?:ResourceStr,text?:ResourceStr})
+   ```
+
+   - placeHolder：输入框无输入时提示的文本
+
+     ```typescript
+     TextInput({placeholder:'请输入账号或手机号'})
+     ```
+
+2. TextInput组件属性
+
+   ```java
+   TextInput({placeholder:'请输入账号或手机号'})
+     .align(Alignment.Center)
+     .width(200) //宽度
+     .height(50) //高度
+     .backgroundColor('#FFF') //背景色
+     .type(InputType.PhoneNumber) //输入类型
+   ```
+
+   

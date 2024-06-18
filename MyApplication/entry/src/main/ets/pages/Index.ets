@@ -22,6 +22,13 @@ struct Index {
           .fontStyle(FontStyle.Italic)
           .width('100%')
           .textAlign(TextAlign.Center)
+
+        TextInput({placeholder:'请输入账号或手机号'})
+          .align(Alignment.Center)
+          .width(200) // 宽度
+          .height(50) // 高度
+          .backgroundColor('#FFF') // 背景色
+          .type(InputType.PhoneNumber)
       }
       .width('100%')
     }
