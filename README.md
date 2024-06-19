@@ -188,8 +188,62 @@ Image：图片显示组件
 
 ## 10. ArkUI组件 - Column && Row页面布局
 
-线形布局组件：Column && Row
+1. 线形布局组件：Column && Row
 
 <img src='./HarmonyOS_layout.png'></img>
 
 <img src='./HarmonyOS_layout1.png'></img>
+
+2. 重点项提取：
+
+- column容器 主轴方向 == 垂直向
+-    Row容器   主轴方向 == 平行向
+
+- 主轴的方向对齐：justifyContent  枚举项 FlexAlign
+- 交叉轴方向对齐：alignItems        枚举项  Row 用 VerticalAlign
+- ​                                                             Column 用 HorizontalAlign
+
+<img src='./HarmonyOS_FlexAlign.png'></img>
+
+3. 调整内左边距，内右边距
+
+   ```javascript
+   // 此调整，上下左右边距都为20
+   .padding(20)
+   
+   // 更加精细
+   .padding({
+     top:20,
+     bottom:20,
+     left:20,
+     right:20
+   })
+   ```
+
+4. 鸿蒙自带分隔符
+
+   ```javascript
+   divider()
+   ```
+
+5. 调整行 (Row) 与行 (Row) 之间的间距
+
+   ```java
+   Column({space:20}){
+     Row();
+     Row();
+   }
+   ```
+
+6. 调整外边距
+
+   ```java
+   .margin({
+     top:50,
+     bottom:20,
+     left:20,
+     right:20
+   })
+   ```
+
+## 11. ArkUI组件 - 循环控制
