@@ -247,3 +247,53 @@ Image：图片显示组件
    ```
 
 ## 11. ArkUI组件 - 循环控制
+
+<img src='./HarmonyOS_listView.png'></img>
+
+```javascript
+// 声明要循环的数组
+class Item {
+  name : string
+  image : ResourceStr
+  price : Number
+
+ 	constructor(
+  	name:string,
+    image:ResourceStr,
+    price:Number) {
+    	this.name = name
+    	this.image = image
+    	this.price = price
+  }
+}
+
+private items: Array<Item> = [
+  new Item('Mate60', $r('app.media.mate60'),6999),
+  new Item('MateBook', $r('app.media.matebookXPro'),13999),
+  new Item('WatchGT4', $r('app.media.WatchGT4'),1438),
+  new Item('FreeBuds3', $r('app.media.FreeBuds'),1499),
+  new Item('Mate X5',$r('app.media.mateX5'),3799)
+]
+```
+
+```javascript
+// ForEach循环遍历数组，根据数组内容渲染页面组件
+Row(){
+  ForEach(
+    this.items,
+    item => { //页面组件生成函数
+      Column(){
+        Image(item.image)
+          .height(30)
+        Text(item.name)
+          .fontSize(10)
+        Text('¥'+item.price)
+          .fontSize(10)
+          .fontColor('#F36')
+      }
+      .layoutWeight(1)
+    }
+  )
+}
+```
+

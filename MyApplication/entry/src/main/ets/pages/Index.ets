@@ -1,4 +1,17 @@
 import App from '@system.app'
+// 定义成员变量
+class Item {
+  name : string
+  image : ResourceStr
+  price : Number
+
+  constructor(name:string , image:ResourceStr , price:Number) {
+    this.name = name
+    this.image = image
+    this.price = price
+  }
+}
+
 @Entry
 @Component
 struct Index {
@@ -6,6 +19,14 @@ struct Index {
   @State name_n50ab: string = '我的阿尔法T'
   @State imgWidth: number = 250
   @State imgHeight: number = 250
+
+  private items: Array<Item> = [
+    new Item('Mate60', $r('app.media.mate60'),6999),
+    new Item('MateBook', $r('app.media.matebookXPro'),13999),
+    new Item('WatchGT4', $r('app.media.WatchGT4'),1438),
+    new Item('FreeBuds3', $r('app.media.FreeBuds'),1499),
+    new Item('Mate X5',$r('app.media.mateX5'),3799)
+  ]
 
   build() {
 
@@ -198,6 +219,31 @@ struct Index {
       .borderRadius(8)
       .backgroundColor('#1A6070FF')
       .margin(20)
+
+      Row(){
+        ForEach(
+          this.items,
+          item => { //页面组件生成函数
+            Column(){
+              Image(item.image)
+                .height(30)
+              Text(item.name)
+                .fontSize(10)
+              Text('¥'+item.price)
+                .fontSize(10)
+                .fontColor('#F36')
+            }
+            .layoutWeight(1)
+          }
+        )
+      }
+      .width('90%')
+      .height(70)
+      .borderRadius(8)
+      .backgroundColor('#1A6070FF')
+      .margin({
+        bottom:20
+      })
 
       Row(){
         Column(){
