@@ -220,6 +220,28 @@ struct Index {
       .backgroundColor('#1A6070FF')
       .margin(20)
 
+      List({space:8}){
+        ForEach(
+          this.items,
+          item => { //页面组件生成函数
+            ListItem(){
+              Column(){
+                Image(item.image)
+                  .height(30)
+                Text(item.name)
+                  .fontSize(10)
+                Text('¥'+item.price)
+                  .fontSize(10)
+                  .fontColor('#F36')
+              }
+            }
+          }
+        )
+      }
+      .width('100%')
+      .listDirection(Axis.Horizontal)
+      .layoutWeight(1)
+
       Row(){
         ForEach(
           this.items,
