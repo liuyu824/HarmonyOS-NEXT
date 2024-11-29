@@ -1,12 +1,26 @@
 {
   "app": {
-    "signingConfigs": [],
-    "compileSdkVersion": 9,
-    "compatibleSdkVersion": 9,
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "/Users/liuyu/.ohos/config/default_MyApplication_Y5umyus8T8_A3uIG76YwZZHttOGV3qFoX0aHPmG3b3s=.cer",
+          "storePassword": "0000001B7CFC1ABA234DF3EAA70CFBBB1C331610EA63C5175A51382BEA3653C466F0BB7566114B3B94E470",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001B1C5D787574E0A551CC47248256EEEAE386A6530DA18BE7096F6AA0542F730DC5B2AC90717CF5F1",
+          "profile": "/Users/liuyu/.ohos/config/default_MyApplication_Y5umyus8T8_A3uIG76YwZZHttOGV3qFoX0aHPmG3b3s=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "/Users/liuyu/.ohos/config/default_MyApplication_Y5umyus8T8_A3uIG76YwZZHttOGV3qFoX0aHPmG3b3s=.p12"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
         "signingConfig": "default",
+        "compatibleSdkVersion": "4.0.0(10)",
+        "runtimeOS": "HarmonyOS"
       }
     ]
   },

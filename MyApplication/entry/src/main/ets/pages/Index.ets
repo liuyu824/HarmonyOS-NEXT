@@ -223,7 +223,7 @@ struct Index {
       List({space:8}){
         ForEach(
           this.items,
-          item => { //页面组件生成函数
+          (item:Item) => { //页面组件生成函数
             ListItem(){
               Column(){
                 Image(item.image)
@@ -245,7 +245,7 @@ struct Index {
       Row(){
         ForEach(
           this.items,
-          item => { //页面组件生成函数
+          (item:Item) => { //页面组件生成函数
             Column(){
               Image(item.image)
                 .height(30)
