@@ -2,7 +2,7 @@
   "app": {
     "signingConfigs": [
       {
-        "name": "default",
+        "name": "com.remoteControl.batcBE12",
         "type": "HarmonyOS",
         "material": {
           "certpath": "/Users/liuyu/.ohos/config/default_MyApplication_Y5umyus8T8_A3uIG76YwZZHttOGV3qFoX0aHPmG3b3s=.cer",
@@ -18,7 +18,7 @@
     "products": [
       {
         "name": "default",
-        "signingConfig": "default",
+        "signingConfig": "com.remoteControl.batcBE12",
         "compatibleSdkVersion": "4.0.0(10)",
         "runtimeOS": "HarmonyOS"
       }
@@ -36,6 +36,42 @@
           ]
         }
       ]
+    },
+    {
+      "name": "airCondition",
+      "srcPath": "./features/airCondition",
+    },
+    {
+      "name": "bluetooth",
+      "srcPath": "./features/bluetooth",
+    },
+    {
+      "name": "carLocation",
+      "srcPath": "./features/carLocation",
+    },
+    {
+      "name": "carStatus",
+      "srcPath": "./features/carStatus",
+    },
+    {
+      "name": "chargeCenter",
+      "srcPath": "./features/chargeCenter",
+    },
+    {
+      "name": "MainControlPage",
+      "srcPath": "./features/MainControlPage"
+    },
+    {
+      "name": "otaUpdate",
+      "srcPath": "./features/otaUpdate",
+    },
+    {
+      "name": "shareCenter",
+      "srcPath": "./features/shareCenter",
+    },
+    {
+      "name": "common",
+      "srcPath": "./common",
     }
   ]
 }

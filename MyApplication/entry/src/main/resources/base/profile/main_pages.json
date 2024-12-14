@@ -1,5 +1,6 @@
 {
   "src": [
-    "pages/Index"
+    "pages/BATC_login",
+    "pages/AF_rmtCtrlPage"
   ]
 }

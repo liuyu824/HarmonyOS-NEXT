@@ -5,6 +5,16 @@
   "main": "",
   "author": "",
   "license": "",
-  "dependencies": {}
+  "dependencies": {
+    '@ohos/common' : 'file:../common',
+    '@ohos/airCondition' : 'file:../features/airCondition',
+    '@ohos/bluetooth' : 'file:../features/bluetooth',
+    '@ohos/carLocation' : 'file:../features/carLocation',
+    '@ohos/carStatus' : 'file:../features/carStatus',
+    '@ohos/chargeCenter' : 'file:../features/chargeCenter',
+    '@ohos/loginPage' : "file:../features/MainControlPage",
+    '@ohos/otaUpdate' : 'file:../features/otaUpdate',
+    '@ohos/shareCenter' : 'file:../features/shareCenter'
+  }
 }
 
